@@ -1,5 +1,6 @@
-export OPENAI_API_KEY=""
-export OPENAI_BASE_URL="https://openrouter.ai/api/v1"
+set -a
+source ../.env
+set +a
 export GPT_VERSION="nex-agi/nex-n2-pro:free"
 
 PAPER_NAME="Transformer"
