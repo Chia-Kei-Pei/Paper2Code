@@ -9,7 +9,7 @@
 
 - **OpenAI Python SDK (`openai` >= 1.65.4)** — used by all pipeline stages to call chat completion endpoints
 - **OpenRouter** — primary API provider. OpenAI-compatible, so no SDK change is needed; only `base_url` and `api_key` differ.
-- **Model**: configurable via `--gpt_version` / `GPT_VERSION`. Free/open models on OpenRouter (e.g., Gemma 4) are the primary target.
+- **Model**: configurable via `--gpt_version` / `GPT_VERSION`. Free/open models on OpenRouter (e.g., `nex-agi/nex-n2-pro:free`) are the primary target.
 
 ## Pipeline Stages (unchanged)
 
@@ -26,7 +26,7 @@
 
 - **`OPENAI_API_KEY`** — set to the OpenRouter API key
 - **`OPENAI_BASE_URL`** — set to `https://openrouter.ai/api/v1`
-- **`GPT_VERSION`** — any model ID from OpenRouter (e.g., `google/gemma-4-9b-it`)
+- **`GPT_VERSION`** — any model ID from OpenRouter (e.g., `nex-agi/nex-n2-pro:free`)
 
 These are consumed by an updated `OpenAI(api_key=..., base_url=...)` client initialization across all pipeline files.
 
@@ -49,3 +49,6 @@ tiktoken>=0.9.0
 ```
 
 vLLM and transformers are optional (only needed if running local open-source models without OpenRouter).
+
+## Model
+`nex-agi/nex-n2-pro:free`

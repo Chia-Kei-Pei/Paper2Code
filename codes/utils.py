@@ -237,6 +237,7 @@ def cal_cost(response_json, model_name):
 
         # OpenRouter / free models
         "nex-agi/nex-n2-pro": {"input": 0, "cached_input": 0, "output": 0},
+        "nex-agi/nex-n2-pro:free": {"input": 0, "cached_input": 0, "output": 0},
     }
 
     
