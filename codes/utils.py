@@ -234,6 +234,9 @@ def cal_cost(response_json, model_name):
 
         # gpt-image-1
         "gpt-image-1": {"input": 5.00, "cached_input": None, "output": None},
+
+        # OpenRouter / free models
+        "nex-agi/nex-n2-pro": {"input": 0, "cached_input": 0, "output": 0},
     }
 
     

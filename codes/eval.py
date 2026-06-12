@@ -1,4 +1,4 @@
-from openai import OpenAI
+from llm import create_client
 import json
 import os
 import sys
@@ -6,7 +6,7 @@ import argparse
 from utils import read_python_files, extract_planning, content_to_json, \
         num_tokens_from_messages, read_all_files, extract_json_from_string, get_now_str, print_log_cost
 
-client = OpenAI(api_key = os.environ["OPENAI_API_KEY"])
+client = create_client()
 
 def api_call(request_json):
     completion = client.chat.completions.create(**request_json)
